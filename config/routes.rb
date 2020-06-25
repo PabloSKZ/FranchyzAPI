@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :players
+
   devise_for :coaches
 
   resources :players, except:[:new, :create, :delete]
