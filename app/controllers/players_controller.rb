@@ -1,4 +1,4 @@
-class PlayersController < ApplicationController
+class PlayersController < Devise::InvitationsController
 	before_action :authenticate_player!, only: [:update]
 	before_action :set_player, only: [:show, :update, :destroy]
 
@@ -13,6 +13,11 @@ class PlayersController < ApplicationController
 		else
 			render json: @player.errors, status: :unprocessable_entity
 		end
+	end
+
+	def create
+		puts "$" * 60
+		@player.send_reset_password_instructions
 	end
 
 	private
