@@ -47,3 +47,4 @@ gem 'devise-jwt', '~> 0.6.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem "table_print"
+gem 'devise_invitable', '~> 2.0.0'
